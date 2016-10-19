@@ -3,7 +3,6 @@
 * Simple RSS Feeder based on Flask
 
 
-
 ---
 
 * Run on Terminal 
@@ -31,7 +30,7 @@
 
 * 浏览器输入: 
     * http://192.168.xx.xx:5000/
-   
+
 ---
 
 ## RSS TEST
@@ -49,6 +48,7 @@
 
 ---
 
+
 Upgrade
 =======
 
@@ -56,13 +56,23 @@ This is done by running: `python db_migrate && python db_upgrade`.
 
 
 After the introduction of feeds, the whole bookmark model was renamed and extended. Due to this a script called 'db_merge.py' was created. This upgrade is done by;
-  * Move the current flaskmarks.sqlite file to something like flaskmarks.sqlite.old. (A good practice is also to take an backup)
-  * Run `python db_create.py` (this creates a new flaskmarks.sqlite file)
-  * Run `python db_merge.py flaskmarks.sqlite.old flaskmarks.sqlite`
-This process runs trough the old database and copies it into the new. It is therefor important that the flaskmarks.sqlite does not contain anything other than the schema.
+* Move the current flaskmarks.sqlite file to something like flaskmarks.sqlite.old. (A good practice is also to take an backup)
+* Run `python db_create.py` (this creates a new flaskmarks.sqlite file)
+    * Run `python db_merge.py flaskmarks.sqlite.old flaskmarks.sqlite`
+      This process runs trough the old database and copies it into the new. It is therefor important that the flaskmarks.sqlite does not contain anything other than the schema.
 
 
---- 
+---
+
+## Screenshots
+
+* ![home](screenshots/home.png)
+* ![bookmark](screenshots/bookmark.png)
+* ![welcome](screenshots/welcome.png)
+* ![rssfeeder](screenshots/rssfeeder.png)
+
+
+---
 ## @log
 * v2.1
     1. 规范化代码(PEP8)
